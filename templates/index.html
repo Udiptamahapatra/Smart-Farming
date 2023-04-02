@@ -14,7 +14,6 @@
 </head>
 
 <body>
-  <img src="Amazon.jpg" alt="">
  <div class="login">
   
 	<h1>Predict Crop Analysis</h1>
@@ -22,7 +21,8 @@
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
     	<input type="text" name="nitrogen" placeholder="Value for Nitrogen" required="required" />
-        <input type="text" name="phosphorus" placeholder="Value for Phosphorus" required="required" />
+      
+    <input type="text" name="phosphorus" placeholder="Value for Phosphorus" required="required" />
 		<input type="text" name="pottasium" placeholder="Value for Pottasium" required="required" />
 		<input type="text" name="temperature" placeholder="Value for temperature" required="required" />
 		<input type="text" name="humidity" placeholder="Value for humidity" required="required" />
@@ -33,7 +33,7 @@
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
-   <br>
+  
    <br>
    {{ prediction_text }}
 
